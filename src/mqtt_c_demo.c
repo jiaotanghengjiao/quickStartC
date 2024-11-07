@@ -14,7 +14,7 @@
 #include "string.h"
 #include "string_util.h"
 
-char *uri = "ssl://iot-mqtts.cn-north-4.myhuaweicloud.com:8883";
+char *uri = "ssl://iotda-device.cidc-rp-12.joint.cmecloud.cn:8883";
 int port = 8883;
 char *username = "yourDeviceId"; 
 char *password = "yoursecret";
@@ -54,7 +54,7 @@ void TimeSleep(int ms) {
 void mqtt_connect_failure(void *context, MQTTAsync_failureData *response) {
 	retryTimes++;
 	printf("connect failed: messageId %d, code %d, message %s\n", response->token, response->code, response->message);
-	//ÍË±ÜÖØÁ¬
+	//ï¿½Ë±ï¿½ï¿½ï¿½ï¿½ï¿½
 	int lowBound =  defaultBackoff * 0.8;
 	int highBound = defaultBackoff * 1.2;
 	int randomBackOff = rand() % (highBound - lowBound + 1);
@@ -164,7 +164,7 @@ MQTTAsync_SSLOptions ssl_opts = MQTTAsync_SSLOptions_initializer;
 
 void mqtt_connection_lost(void *context, char *cause) {
 	printf("mqtt_connection_lost() error, cause: %s\n", cause);
-	//¿ÉÒÔÔÚÕâÀïÉèÖÃÖØÁ¬
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 }
 
 int mqtt_connect() {
