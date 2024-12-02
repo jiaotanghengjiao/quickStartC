@@ -12,7 +12,7 @@ HEADER_PATH = -I./include
 LIB_PATH = -L./lib
 SRC_PATH = ./src
 
-LIBS = $(LIB_PATH) -lpaho-mqtt3as -lssl -lcrypto
+LIBS = $(LIB_PATH) -lpaho-mqtt3as -lssl -lcrypto -lm
 #$(LIB_PATH) -lHWMQTT
 #$(LIB_PATH) -lpaho-mqtt3cs $(LIB_PATH)
 
